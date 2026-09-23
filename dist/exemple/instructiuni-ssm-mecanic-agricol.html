@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Instructiuni proprii SSM - Mecanic agricol | Evaris</title><style>
+:root{
+  --navy:#102a43; --navy2:#173f63; --gold:#f3c94d; --gold2:#fff4cc;
+  --ink:#1f2933; --muted:#627386; --line:#d7e0e8; --soft:#f5f8fb; --softblue:#eaf3f8;
+  --green:#0b5d49; --danger:#a63c2f;
+}
+*{box-sizing:border-box; page-break-before:auto !important; page-break-after:auto !important; break-before:auto !important; break-after:auto !important;}
+html{scroll-behavior:smooth;background:#edf2f6;}
+body{margin:0;background:#edf2f6;color:var(--ink);font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+.site-shell{padding:24px;}
+.evaris-doc{margin:0 auto;background:#fff;border:1px solid #dfe7ee;border-radius:18px;box-shadow:0 18px 45px rgba(16,42,67,.08);padding:34px 42px 48px;overflow:hidden;}
+.doc-instr{max-width:1040px}.doc-eval{max-width:1380px}.doc-plan{max-width:1760px}
+.site-brand{margin:0 0 22px!important;padding:0 0 11px!important;border-bottom:3px solid var(--gold)!important;color:var(--navy)!important;background:transparent!important;}
+.site-brand p{margin:0!important;color:var(--navy)!important;font-size:.82rem!important;letter-spacing:.07em;text-transform:uppercase;font-weight:800;}
+.evaris-doc p{margin-top:0!important;margin-bottom:.62rem!important;margin-left:0!important;margin-right:0!important;line-height:1.5!important;}
+.evaris-doc h1,.evaris-doc h2,.evaris-doc h3{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--navy)!important;line-height:1.18!important;text-align:left!important;letter-spacing:-.015em;}
+.evaris-doc h1{font-size:1.9rem!important;margin:1.55rem 0 .62rem!important;font-weight:800!important;}
+.evaris-doc h2{font-size:1.2rem!important;margin:1.15rem 0 .48rem!important;font-weight:800!important;}
+.evaris-doc h3{font-size:1.02rem!important;margin:.95rem 0 .4rem!important;font-weight:750!important;}
+.evaris-doc > p:first-of-type{margin-top:0!important;}
+.evaris-doc font{font-family:inherit!important;font-size:inherit!important;}
+.evaris-doc a{color:#0a65a8;text-decoration:none;border-bottom:1px solid rgba(10,101,168,.28);}
+.evaris-doc a:hover{color:#064a7b;border-bottom-color:currentColor;}
+.evaris-doc ul,.evaris-doc ol{margin:.35rem 0 .78rem 1.15rem!important;padding-left:1.15rem!important;}
+.evaris-doc li{margin:.18rem 0;line-height:1.45;}
+.evaris-doc br{line-height:1.25;}
+.evaris-doc [style*="background: #0b2b4c"],.evaris-doc [style*="background:#0b2b4c"]{border-radius:9px;padding:.68rem .82rem!important;margin:.9rem 0 .65rem!important;}
+.evaris-doc [style*="background: #ddecf4"],.evaris-doc [style*="background:#ddecf4"]{border-radius:8px;padding:.5rem .72rem!important;margin:.55rem 0!important;}
+.evaris-doc [style*="background: #fff4cc"],.evaris-doc [style*="background:#fff4cc"]{border-radius:7px;padding:.32rem .55rem!important;}
+.table-scroll{width:100%;overflow-x:auto;overflow-y:hidden;margin:.9rem 0 1.15rem;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 4px 14px rgba(16,42,67,.05);}
+.table-scroll table{margin:0!important;border:0!important;border-collapse:collapse!important;background:#fff;}
+table{font-size:.88rem!important;line-height:1.35!important;}
+td,th{padding:.52rem .58rem!important;vertical-align:top!important;border:1px solid var(--line)!important;height:auto!important;line-height:1.35!important;}
+td p,th p{margin:0 0 .22rem!important;line-height:1.35!important;font-size:inherit!important;color:inherit!important;}
+td p:last-child,th p:last-child{margin-bottom:0!important;}
+thead td,thead th{position:sticky;top:0;z-index:2;background:var(--navy)!important;color:#fff!important;font-weight:800!important;text-align:center!important;box-shadow:inset 0 -2px 0 rgba(243,201,77,.8);}
+thead td *,thead th *{color:#fff!important;}
+tbody tr:hover td{background-image:linear-gradient(rgba(16,42,67,.018),rgba(16,42,67,.018));}
+.wide-table{min-width:1120px!important;width:100%!important;}
+.plan-grid{min-width:1680px!important;width:1680px!important;}
+.plan-grid td,.plan-grid th{font-size:.78rem!important;padding:.46rem .48rem!important;}
+.plan-grid thead td,.plan-grid thead th{font-size:.76rem!important;}
+.eval-grid{min-width:1160px!important;width:100%!important;}
+.check-grid{min-width:720px!important;width:100%!important;}
+.evaris-doc img{display:block;max-width:100%;height:auto;margin:1rem auto;border-radius:10px;}
+.figure-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:1rem 0 1.25rem;box-shadow:0 4px 14px rgba(16,42,67,.05);}
+hr{border:0;border-top:1px solid var(--line);margin:1.25rem 0;}
+@media(max-width:900px){
+  .site-shell{padding:0}.evaris-doc{border-radius:0;border-left:0;border-right:0;padding:24px 18px 38px;box-shadow:none}
+  body{font-size:15px}.evaris-doc h1{font-size:1.55rem!important}.evaris-doc h2{font-size:1.12rem!important}
+  .table-scroll{border-radius:8px;margin-left:0;margin-right:0}
+}
+@media print{
+  html,body{background:#fff}.site-shell{padding:0}.evaris-doc{box-shadow:none;border:0;border-radius:0;max-width:none;padding:0}.table-scroll{overflow:visible;box-shadow:none}
+  .plan-grid,.wide-table,.eval-grid,.check-grid{min-width:0!important;width:100%!important}a{color:inherit!important;border:0!important}
+}
+</style></head>
+<body dir="ltr" lang="ro" link="#000080" text="#0b2824" vlink="#800000"><div class="site-shell"><main class="evaris-doc doc-instr">
+<div class="site-brand"><p style="border-top: none; border-bottom: 2.00pt solid #dcff73; border-left: none; border-right: none; padding: 0in; margin-bottom: 0.41in; line-height: 100%">
+<font size="2" style="font-size: 9pt"><b>EVARIS  /  SSM ȘI SU–PSI</b></font></p>
+</div>
+<p style="margin-bottom: 0.1in; letter-spacing: 0.3pt"><font color="#000000"><font face="Calibri, serif"><font size="6" style="font-size: 29pt"><b><span lang="ro-RO">Instrucțiuni
+proprii de securitate și sănătate în muncă</span></b></font></font></font></p>
+<p style="letter-spacing: 0.8pt; margin-bottom: 0.1in"><font color="#000000"><font face="Calibri, serif"><font size="4" style="font-size: 14pt"><i><span lang="ro-RO">Mecanic
+agricol</span></i></font></font></font></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Exploatarea
+tractoarelor și a mașinilor agricole<br/>
+Întreținere și
+reparații în atelier și pe teren</span></p>
+<h2 class="western"><span lang="ro-RO">Statutul documentului</span></h2>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO"><b>Acest
+material este un exemplu de structură. Nu poate fi utilizat ca
+document final fără verificarea activității reale, a
+echipamentelor, a locurilor de muncă, a lucrătorilor expuși și a
+cerințelor legale aplicabile.</b></span></p>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Citarea
+prevederilor se face prin „art. … din Instrucțiunile proprii SSM
+pentru mecanic agricol”, cu indicarea codului și reviziei
+documentului. Numerele dintre paranteze drepte, precum [9], rămân
+trimiteri bibliografice. Articolele sunt numerotate continuu;
+tabelele au rol de sinteză și verificare.</span></p>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Versiune
+editorială revizuită la 20 septembrie 2026, pornind de la
+documentul furnizat. Conținutul a fost reorganizat și completat cu
+măsuri pentru intervenții la utilaje. Nu reprezintă o evaluare a
+riscurilor efectuată la un angajator identificat.</span></p>
+<h2 class="western"><span lang="ro-RO">Date de completat înainte de
+aplicare</span></h2>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Angajator
+și punct de lucru: __________________________________<br/>
+Cod
+intern și revizie:
+________________________________________<br/>
+Echipamente și
+activități acoperite: ___________________________<br/>
+Întocmit și
+verificat de: _____________________________________<br/>
+Aprobat de
+angajator la data: _________________________________</span></p>
+<h2 class="western"><span lang="ro-RO">Structura documentului</span></h2>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">01
+Aplicare și responsabilități  •  02 Riscuri și protecție<br/>
+03
+Verificări înainte de lucru  •  04 Conducere și cuplare<br/>
+05
+Oprire sigură și intervenții  •  06 Lucrul în atelier<br/>
+07
+Mediu de lucru și urgențe  •  08 Verificare zilnică<br/>
+09
+Surse</span></p>
+<h1 class="western" style=""><span lang="ro-RO">01
+ Aplicare și responsabilități</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Scop și
+limite</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+1. </b></span><span lang="ro-RO">Instrucțiunile urmăresc prevenirea
+accidentării și îmbolnăvirii la conducerea, deservirea,
+întreținerea și repararea utilajelor agricole. Se aplică
+operațiilor atribuite prin fișa postului, în limitele pregătirii,
+instruirii și desemnării lucrătorului. Calitatea de mecanic
+agricol nu conferă automat dreptul de a conduce pe drumurile publice
+sau de a executa orice reparație.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+2. </b></span><span lang="ro-RO">Pentru fiecare utilaj se completează
+modelul cu manualul producătorului, accesoriile utilizate, punctele
+de izolare și sprijinire, limitele de exploatare și riscurile
+identificate la locul de muncă. Sudarea, prelucrarea mecanică,
+lucrul la instalații electrice ori la echipamente pentru tratamente
+fitosanitare se includ numai dacă sunt efectiv executate.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Responsabilități</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+3. </b></span><span lang="ro-RO">Angajatorul asigură evaluarea
+riscurilor, echipamente adecvate și întreținute, instruirea,
+supravegherea și mijloacele de protecție; aprobă instrucțiunile
+adaptate. [1, 2]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+4. </b></span><span lang="ro-RO">Conducătorul locului de muncă
+repartizează sarcinile în raport cu competența, verifică zona de
+lucru și oprește utilizarea utilajelor necorespunzătoare.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+5. </b></span><span lang="ro-RO">Lucrătorul verifică utilajul,
+respectă instrucțiunile, utilizează protecțiile și comunică
+imediat defecțiunile ori situațiile periculoase. Nu neutralizează
+dispozitivele de securitate. [1]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+6. </b></span><span lang="ro-RO">Lucrătorii fără experiență
+primesc sarcini și supraveghere adaptate pregătirii lor. Pentru
+tineri se verifică separat condițiile legale și riscurile; acest
+model nu constituie permisiune de lucru pentru minori. [3]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Condiții de
+admitere</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+7. </b></span><span lang="ro-RO">Activitatea se desfășoară de
+personal pregătit pentru echipamentul respectiv, instruit și apt
+medical pentru sarcina atribuită. Este interzis lucrul sub influența
+alcoolului sau a altor substanțe care afectează capacitatea de
+muncă. Oboseala, starea de rău ori tratamentele care influențează
+vigilența se comunică înainte de preluarea utilajului.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Termeni
+utilizați</span></h2>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">SSM
+— securitate și sănătate în muncă. EIP — echipament
+individual de protecție. Priza de putere — ieșirea de putere
+mecanică ce antrenează utilajul. ROPS — structură de protecție
+la răsturnare. Izolarea energiilor — separarea și securizarea
+surselor de energie, inclusiv controlul energiei reziduale. Pericol
+grav și iminent — situație concretă și actuală în care un
+accident se poate produce în orice moment. [1]</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">02  Riscuri și protecție</span></h1>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Inventarul
+de mai jos sintetizează riscurile din documentul inițial și
+completările de prevenire. Prezența și nivelul lor se verifică
+pentru fiecare loc de muncă; nu sunt atribuite scoruri sau valori
+măsurate fără date reale.</span></p>
+<center>
+<div class="table-scroll"><table aria-label="Tabel 1" cellpadding="6" cellspacing="0" class="" role="table" width="662">
+<col width="261"/>
+<col width="376"/>
+<thead>
+<tr>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Situație
+					periculoasă</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Măsura
+					principală</b></span></font></font></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Cardan,
+					curele, ventilator, organe de lucru</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Apărători
+					complete; oprire și izolare înainte de acces.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Coliziune,
+					mers înapoi, manevre fără vizibilitate</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Separarea
+					pietonilor; zonă liberă; viteză adaptată.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Răsturnare,
+					cabrare, pierderea aderenței</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Utilaj
+					și traseu adecvate; ROPS și centură; sarcină controlată.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Căderea
+					pieselor, benelor ori utilajelor ridicate</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Sprijin
+					mecanic dimensionat; interzis accesul sub sarcini suspendate.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Jet
+					hidraulic, aer comprimat, recipiente sub presiune</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Depresurizare;
+					componente compatibile; control fără contact cu jetul.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Așchii,
+					disc abraziv, muchii tăioase</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Scule
+					verificate; piesă fixată; ecrane și protecția ochilor.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Arsuri,
+					incendiu, explozie, arc electric</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Controlul
+					surselor de aprindere; răcire; procedură pentru lucrări la
+					cald.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Electrocutare
+					la scule ori instalații</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Echipamente
+					verificate; izolare; intervenții de personal competent.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Zgomot,
+					vibrații, efort și posturi forțate</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Întreținere,
+					reglarea scaunului, organizarea expunerii, ajutoare mecanice.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Praf,
+					gaze, vapori, produse fitosanitare</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Ventilare
+					și captare; decontaminare; protecție stabilită după
+					expunere.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Frig,
+					căldură, microorganisme, animale și insecte</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Organizarea
+					lucrului, igienă, îmbrăcăminte adecvată și controlul
+					zonei.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Alunecare,
+					împiedicare, cădere de pe utilaj</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Acces
+					curat și sigur; trei puncte de sprijin; fără urcare în mers.</span></font></p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</center>
+<h2 align="justify" class="western"><span lang="ro-RO">Alegerea
+echipamentului individual de protecție</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+8. </b></span><span lang="ro-RO">EIP se stabilește prin evaluarea
+riscurilor: încălțăminte de protecție, îmbrăcăminte ajustată,
+protecția ochilor și, după caz, protecție auditivă ori
+respiratorie. Mănușile se aleg pentru operația executată; nu se
+poartă lângă organe rotative expuse dacă pot fi antrenate. Se
+îndepărtează bijuteriile și se prinde părul lung.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">03  Verificări înainte de lucru</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Utilajul</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+9. </b></span><span lang="ro-RO">Verifică frânele, direcția,
+anvelopele, elementele de fixare a roților, comenzile și
+indicatoarele. Orice defect care afectează securitatea se remediază
+înainte de utilizare.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+10. </b></span><span lang="ro-RO">Controlează apărătorile prizei
+de putere, cardanului, curelelor și ventilatorului. Nu porni
+utilajul cu protecții lipsă, deteriorate sau improvizate.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+11. </b></span><span lang="ro-RO">Verifică vizual furtunurile,
+racordurile și eventualele pierderi de ulei, carburant ori lichid de
+răcire. Nu atinge jeturile și nu strânge racorduri sub presiune.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+12. </b></span><span lang="ro-RO">Controlează scaunul, centura,
+structura de protecție la răsturnare, treptele, mânerele și
+vizibilitatea. Fixează sculele și obiectele din cabină.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+13. </b></span><span lang="ro-RO">Verifică luminile, semnalizarea,
+oglinzile și conexiunile remorcii, precum și mijloacele de
+intervenție prevăzute pentru activitate.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Zona și
+sarcina de lucru</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+14. </b></span><span lang="ro-RO">Identifică gropile, gurile de
+hidrant, șanțurile, taluzurile, liniile electrice aeriene (LEA) și
+liniile elctrice subterane (LES), marginile instabile și spațiile
+de manevră. Delimitează zonele periculoase și traseele pentru
+pietoni.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+15. </b></span><span lang="ro-RO">Verifică terenul și condițiile
+meteorologice. Oprește sau amână sarcina când aderența,
+vizibilitatea ori stabilitatea nu permit executarea în siguranță.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+16. </b></span><span lang="ro-RO">Planifică transportul și
+gabaritul ansamblului, inclusiv înălțimea cu accesorii ridicate.
+Identifică liniile electrice aeriene; stabilește distanțele și
+măsurile cu persoanele competente înainte de lucru.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+17. </b></span><span lang="ro-RO">Îndepărtează persoanele
+neimplicate, inclusiv copiii, din zona utilajului. Asigură
+comunicarea între conducător și persoana care dirijează
+manevrele.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Pornirea și
+accesul</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+18. </b></span><span lang="ro-RO">Urcă și coboară pe accesul
+proiectat de producător, cu fața spre utilaj și trei puncte de
+sprijin. Nu sări și nu urca ori coborî în mers. Menține treptele
+fără ulei, noroi sau gheață.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+19. </b></span><span lang="ro-RO">Pornește de pe postul de
+conducere, cu frâna de staționare aplicată, comenzile în poziția
+de pornire indicată în manual și priza de putere decuplată.
+Verifică zona înainte de acționare. Nu ocoli interblocările și
+nu scurtcircuita demarorul.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+20. </b></span><span lang="ro-RO">Nu lăsa motorul să funcționeze
+în spații închise fără evacuarea controlată a gazelor de
+eșapament. Dacă verificarea inițială evidențiază un pericol,
+marchează utilajul ca indisponibil și anunță conducătorul
+locului de muncă.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">04  Conducere și cuplare</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Deplasarea și
+lucrul pe pantă</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+21. </b></span><span lang="ro-RO">Adaptează viteza la teren, sarcină
+și vizibilitate; redu viteza înainte de viraj. Respectă masa
+admisă și asigură încărcătura. Transportă persoane numai în
+locurile prevăzute de producător; bara de remorcare, tiranții și
+utilajele tractate nu sunt locuri pentru pasageri.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+22. </b></span><span lang="ro-RO">Pe pantă, alege utilajul și
+configurația admise de producător. Verifică stabilitatea
+ansamblului și efectul remorcii ori al accesoriilor asupra centrului
+de greutate. Păstrează o zonă de siguranță față de margini și
+șanțuri. Un teren parcurs anterior poate deveni nesigur după
+ploaie sau îngheț. [6]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+23. </b></span><span lang="ro-RO">Selectează înainte de intrarea pe
+pantă treapta sau modul de deplasare recomandat de producător. Nu
+coborî la punctul mort și nu întrerupe intenționat frânarea de
+motor. Nu utiliza blocarea diferențialului în viraj contrar
+instrucțiunilor utilajului. Cuplarea pedalelor de frână se face
+conform modului de lucru și manualului.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+24. </b></span><span lang="ro-RO">Folosește centura în asociere cu
+structura de protecție la răsturnare prevăzută și funcțională.
+La răsturnare, rămâi în zona protejată a cabinei; nu încerca să
+sari. Nu modifica sau dezactiva structura de protecție. [6]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Cuplarea
+utilajelor și remorcilor</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+25. </b></span><span lang="ro-RO">Folosește numai cuplele, punctele
+de tractare și accesoriile compatibile. Nu improviza prinderea în
+puncte care pot produce cabrarea.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+26. </b></span><span lang="ro-RO">Imobilizează tractorul și
+utilajul. Intrarea între ele se permite numai după oprire,
+asigurare împotriva deplasării și eliminarea riscului de strivire.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+27. </b></span><span lang="ro-RO">Montează și asigură bolțurile,
+tiranții și stabilizatorii; verifică tirantul central și
+elementele de siguranță. Nu introduce mâinile în punctele de
+strivire.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+28. </b></span><span lang="ro-RO">Conectează corect frânarea,
+iluminarea și instalația hidraulică, conform configurației.
+Verifică funcționarea înainte de plecare.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+29. </b></span><span lang="ro-RO">Controlează cardanul și
+apărătorile, inclusiv compatibilitatea și unghiurile de lucru.
+Decuplează priza când manualul o cere, inclusiv la manevre strânse.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+30. </b></span><span lang="ro-RO">Ridică și coboară accesoriul
+numai cu zona liberă. La transport, asigură-l conform manualului
+împotriva coborârii sau pendulării necontrolate.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Degajarea
+utilajului împotmolit</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+31. </b></span><span lang="ro-RO">Oprește și stabilește o metodă
+de recuperare cu echipamente dimensionate și puncte de prindere
+aprobate. Îndepărtează oamenii din zona elementelor tensionate. Nu
+pune scânduri în fața roților motoare și nu trage cu șocuri ori
+cu accesorii improvizate.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">05  Oprire sigură și intervenții</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Înainte de
+deblocare sau întreținere</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+32. </b></span><span lang="ro-RO">Oprirea motorului nu elimină
+automat toate pericolele. Înainte de intervenție, aplică procedura
+de izolare a utilajului; comenzile hidraulice, inerția, arcurile și
+greutatea pieselor pot menține energie periculoasă. [4]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+33. </b></span><span lang="ro-RO">Parchează pe o suprafață
+stabilă, aplică frâna și asigură roțile împotriva deplasării.
+Coboară accesoriile într-o poziție sigură.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+34. </b></span><span lang="ro-RO">Decuplează antrenările, oprește
+motorul și așteaptă oprirea tuturor pieselor. Scoate cheia și
+păstreaz-o sub controlul persoanei care intervine.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+35. </b></span><span lang="ro-RO">Izolează sursele relevante și
+blochează repornirea potrivit procedurii. Semnalizează intervenția;
+la lucrul în echipă fiecare persoană trebuie protejată împotriva
+repornirii.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+36. </b></span><span lang="ro-RO">Eliberează controlat presiunile și
+securizează energia stocată. Montează sprijiniri mecanice pentru
+orice element care poate cădea ori pivota.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+37. </b></span><span lang="ro-RO">Verifică starea sigură înainte
+de acces. La repunere, montează protecțiile și confirmă că toate
+persoanele, sculele și suporturile temporare sunt în afara zonei
+periculoase.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Hidraulică și
+componente ridicate</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+38. </b></span><span lang="ro-RO">Nu căuta scurgerile cu mâna și
+nu desface racorduri înainte de depresurizare. Furtunurile, cuplele
+și garniturile de schimb trebuie să fie compatibile cu
+specificațiile utilajului. Nu repara furtunuri cu improvizații.
+Probele sub presiune se fac printr-o procedură controlată, cu zona
+delimitată. [7]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+39. </b></span><span lang="ro-RO">Un jet fin poate pătrunde sub
+piele. Suspiciunea de injectare a uleiului sau unsorii este o urgență
+medicală, chiar când leziunea pare mică; solicită imediat ajutor
+și comunică tipul fluidului. Nu aștepta apariția durerii. [8]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+40. </b></span><span lang="ro-RO">Nu lucra sub tractor susținut
+numai de cric și nici sub o benă menținută doar hidraulic.
+Utilizează punctele de ridicare din manual, cricul adecvat și
+suporți dimensionați, pe teren rezistent și plan. Blochează
+articulația tractoarelor articulate înainte de intrarea în zona de
+strivire. [5]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Deblocare și
+verificări cu energie</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+41. </b></span><span lang="ro-RO">Curăță și deblochează cu
+unelte potrivite, din afara traseului pieselor care se pot elibera
+brusc. O probă ce necesită energie se execută numai dacă este
+prevăzută de procedura producătorului, de personal competent și
+cu măsuri distincte; nu se improvizează cu apărători îndepărtate.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">06  Lucrul în atelier</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Scule și
+mașini de prelucrare</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+42. </b></span><span lang="ro-RO">Retrage sculele fisurate, cheile
+uzate și ciocanele cu fixare nesigură. Fixează piesele în
+dispozitive potrivite. La găurire și polizare, păstrează ecranele
+și apărătorile, alege scula sau discul compatibil cu turația și
+materialul și dirijează scânteile departe de persoane și
+materiale combustibile.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+43. </b></span><span lang="ro-RO">Nu ține piesa cu mâna când poate
+fi antrenată. Oprește mașina înainte de măsurare, reglare sau
+îndepărtarea așchiilor; folosește o perie ori o unealtă
+adecvată. La piese lungi se folosesc reazeme și dispozitivele
+prevăzute tehnologic. Nu lăsa mașina în funcțiune
+nesupravegheată.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Roți și
+anvelope</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+44. </b></span><span lang="ro-RO">Schimbarea și repararea roților
+se execută de persoane competente, cu mijloace mecanice pentru
+manevrarea roților grele. Asigură vehiculul, sprijină-l corect și
+controlează rostogolirea roții demontate. Pentru jante demontabile
+sau componente deteriorate, solicită un specialist. [5]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+45. </b></span><span lang="ro-RO">Folosește echipament de umflare cu
+manometru și control al presiunii, racord care nu trebuie ținut cu
+mâna și furtun suficient pentru operare din afara traiectoriei de
+explozie. Utilizează dispozitivul de reținere/protecție adecvat
+roții. Respectă presiunile și procedura producătorului; nu
+încălzi și nu suda o roată cu anvelopa montată. [5]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Sudare și
+lucrări cu foc</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+46. </b></span><span lang="ro-RO">Execută aceste operații numai în
+condițiile stabilite pentru lucrarea respectivă, cu personal
+competent, ventilare/captare, ecrane pentru protejarea celorlalți și
+EIP potrivit. Fixează buteliile și protejează furtunurile.
+Îndepărtează combustibilii, controlează scânteile și asigură
+mijloacele de stingere. [9]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+47. </b></span><span lang="ro-RO">Nu suda recipiente care au conținut
+carburanți fără o procedură specializată de punere în
+siguranță. Nu folosi filtre de sudură sparte ori neadecvate.
+Încheierea lucrării include controlul zonei pentru surse de
+aprindere rămase.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Electricitate
+și baterii</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+48. </b></span><span lang="ro-RO">Verifică sculele electrice,
+cablurile și protecțiile; scoate din uz echipamentele defecte.
+Reparațiile electrice se execută numai de personal competent pentru
+instalația respectivă. Înainte de intervenția la utilaj,
+deconectează bateria când procedura o cere și respectă ordinea
+indicată de producător.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+49. </b></span><span lang="ro-RO">Încarcă bateriile într-o zonă
+ventilată, fără flacără sau scântei; previno scurtcircuitarea
+bornelor cu scule. La lucrul cu electrolit, utilizează protecția
+ochilor și a pielii. Pentru sisteme electrice de înaltă tensiune
+sau baterii deteriorate sunt necesare proceduri și competențe
+dedicate. [9]</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">07  Mediu de lucru și urgențe</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Carburanți și
+suprafețe fierbinți</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+50. </b></span><span lang="ro-RO">Alimentează în zona stabilită,
+cu motorul oprit și răcit suficient conform manualului, departe de
+surse de aprindere. Colectează scurgerile cu materiale adecvate și
+evacuează deșeurile în siguranță. Nu reporni până când
+pericolul a fost înlăturat. Nu folosi carburant la degresare.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+51. </b></span><span lang="ro-RO">Nu deschide instalația de răcire
+fierbinte sau sub presiune. Lasă motorul să se răcească și
+urmează manualul. Evită contactul cu evacuarea, piesele sudate și
+uleiul fierbinte. În medii cu vegetație uscată, înlătură
+depunerile combustibile și verifică evacuarea și dotările de
+prevenire a incendiilor prevăzute pentru utilaj.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Expuneri și
+solicitare fizică</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+52. </b></span><span lang="ro-RO">Menține cabina, filtrele, scaunul
+și suspensia în stare bună. Stabilește măsurile pentru zgomot și
+vibrații pe baza evaluării și, când este necesar, a măsurărilor.
+Valoarea de 87 dB(A) din vechiul document nu este tratată ca
+rezultat măsurat la un loc de muncă actual.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+53. </b></span><span lang="ro-RO">Limitează praful și gazele prin
+întreținere, captare și ventilare. La utilaje folosite pentru
+produse fitosanitare, identifică reziduurile și decontaminează
+conform instrucțiunilor produselor înainte de reparații. Nu sufla
+cu aer comprimat praful de pe îmbrăcăminte sau din frâne cu
+material necunoscut; la suspiciune de azbest se aplică o procedură
+specializată. [5]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+54. </b></span><span lang="ro-RO">Planifică pauzele, hidratarea și
+protecția față de căldură ori frig. Utilizează ajutoare
+mecanice pentru piese grele; evită pozițiile forțate. Păstrează
+igiena mâinilor, acoperă leziunile și verifică zona pentru
+animale, insecte și materiale biologic contaminate.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Incident și
+pericol grav</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+55. </b></span><span lang="ro-RO">Oprește activitatea când aceasta
+se poate face în siguranță, alertează persoanele din zonă și
+anunță conducătorul locului de muncă.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+56. </b></span><span lang="ro-RO">La accident grav, incendiu
+necontrolat ori altă urgență, apelează 112. Comunică locul
+exact, accesul, natura pericolului și numărul persoanelor afectate.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+57. </b></span><span lang="ro-RO">Primul ajutor se acordă de
+persoane instruite, fără expunere la utilaj, electricitate, fum sau
+jeturi. Nu pătrunde într-o zonă periculoasă pentru salvare fără
+mijloace și competențe.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+58. </b></span><span lang="ro-RO">Folosește stingătorul numai dacă
+ești instruit, focarul este incipient și ai cale sigură de
+retragere; altfel evacuează. Nu relua lucrul până la eliminarea
+cauzei și acceptarea repornirii.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+59. </b></span><span lang="ro-RO">La încheierea lucrului, parchează
+în locul stabilit, coboară accesoriile, asigură utilajul și
+cheia, curăță zona și consemnează defecțiunile. Predă
+informațiile necesare schimbului următor.</span></p>
+<p align="justify" class="western" lang="ro-RO" style="">
+<br/>
+<br/>
+</p>
+<p align="justify" class="western" style=""><font face="Calibri, serif"><font size="5" style="font-size: 20pt"><span lang="ro-RO"><b>08
+ Verificare zilnică</b></span></font></font></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Fișă
+orientativă de verificare înainte de pornire. Se adaptează
+fiecărui model de utilaj și nu înlocuiește reviziile sau
+verificările tehnice prevăzute de producător.</span></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Data:
+__________________  Lucrător: _________________________<br/>
+Utilaj
+și identificare: _______________________________________</span></p>
+<center>
+<div class="table-scroll"><table aria-label="Tabel 2" cellpadding="6" cellspacing="0" class="check-grid" role="table" width="662">
+<col width="419"/>
+<col width="46"/>
+<col width="46"/>
+<col width="102"/>
+<thead>
+<tr>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Element
+					verificat</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Da</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Nu</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Nu
+					se aplică</b></span></font></font></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Frâne,
+					direcție, roți și anvelope în stare corespunzătoare</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Apărători
+					și dispozitive de securitate complete</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">ROPS,
+					centură, scaun și acces fără defecte vizibile</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Fără
+					scurgeri sau furtunuri vizibil deteriorate</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Cuplare,
+					bolțuri și stabilizatori asigurați</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Conexiuni
+					de frânare și semnalizare verificate</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Cardan
+					montat și protejat corespunzător</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Zona
+					liberă; obstacole și teren periculos identificate</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Sarcină
+					și traseu potrivite utilajului</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">EIP și
+					mijloace de intervenție disponibile</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Manual
+					și procedură de izolare accesibile</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</center>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+60. </b></span><span lang="ro-RO">Un răspuns „Nu” la o condiție
+de securitate impune remedierea înainte de utilizare. „Nu se
+aplică” se justifică prin configurația și activitatea reală.</span></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Defecte
+observate și măsuri:
+__________________________________<br/>
+__________________________________________________________<br/>
+Persoana
+informată și ora: ___________________________________<br/>
+Confirmarea
+remedierii: ______________________________________</span></p>
+<h2 class="western"><span lang="ro-RO">Date specifice de stabilit la
+angajator</span></h2>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+61. </b></span><span lang="ro-RO">Punctele de izolare, sprijinire și
+cuplare pentru fiecare utilaj; limitele de sarcină, pantă și
+viteză din manual.</span></p>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+62. </b></span><span lang="ro-RO">Persoanele competente, operațiile
+permise și condițiile pentru intervenția în teren sau lucrul
+individual.</span></p>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+63. </b></span><span lang="ro-RO">Contactele pentru urgență,
+accesul salvatorilor și amplasarea trusei și stingătoarelor.</span></p>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+64. </b></span><span lang="ro-RO">Dotarea EIP, periodicitatea
+verificărilor și modul de consemnare a defecțiunilor.</span></p>
+<p class="western" lang="ro-RO" style=""><br/>
+<br/>
+</p>
+<p class="western" style=""><font face="Calibri, serif"><font size="5" style="font-size: 20pt"><span lang="ro-RO"><b>09
+ Surse</b></span></font></font></p>
+<h2 class="western"><span lang="ro-RO">Bază de consultare</span></h2>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Surse
+oficiale consultate la 20 septembrie 2026. Actele românești se
+verifică în forma aplicabilă la aprobarea instrucțiunii.
+Ghidurile HSE sunt repere tehnice de prevenire din Regatul Unit, nu
+legislație românească. Completările se validează cu manualele
+utilajelor și evaluarea locală.</span></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[1]
+Legea nr 319/2006 privind securitatea și sănătatea în muncă</span></font><a href="https://legislatie.just.ro/Public/DetaliiDocument/73772"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[2]
+HG nr 1146/2006 privind utilizarea echipamentelor de muncă</span></font><a href="https://legislatie.just.ro/Public/DetaliiDocument/75585"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[3]
+HG nr 600/2007 privind protecția tinerilor la locul de muncă</span></font><a href="https://legislatie.just.ro/Public/DetaliiDocumentAfis/83571"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[4]
+HSE — Safe maintenance</span></font><a href="https://www.hse.gov.uk/agriculture/topics/maintenance-1.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[5]
+HSE — Vehicle repair</span></font><a href="https://www.hse.gov.uk/agriculture/topics/maintenance-2.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[6]
+HSE — Overturning tractors and other self propelled vehicles</span></font><a href="https://www.hse.gov.uk/agriculture/topics/machinery/farm-vehicles-2.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[7]
+HSE — High pressure fluid injection hazards</span></font><a href="https://www.hse.gov.uk/agriculture/topics/machinery/fluid.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[8]
+HSE — Hydraulic injection injury</span></font><a href="https://www.hse.gov.uk/safetybulletins/hydraulic-injection-injury.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[9]
+HSE — General workshop safety</span></font><a href="https://www.hse.gov.uk/agriculture/topics/maintenance-3.htm"><span lang="ro-RO">↗</span></a></p>
+
+</main></div></body>
+</html>

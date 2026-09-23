@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Internal OSH instructions - Agricultural mechanic | Evaris</title><style>
+:root{
+  --navy:#102a43; --navy2:#173f63; --gold:#f3c94d; --gold2:#fff4cc;
+  --ink:#1f2933; --muted:#627386; --line:#d7e0e8; --soft:#f5f8fb; --softblue:#eaf3f8;
+  --green:#0b5d49; --danger:#a63c2f;
+}
+*{box-sizing:border-box; page-break-before:auto !important; page-break-after:auto !important; break-before:auto !important; break-after:auto !important;}
+html{scroll-behavior:smooth;background:#edf2f6;}
+body{margin:0;background:#edf2f6;color:var(--ink);font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+.site-shell{padding:24px;}
+.evaris-doc{margin:0 auto;background:#fff;border:1px solid #dfe7ee;border-radius:18px;box-shadow:0 18px 45px rgba(16,42,67,.08);padding:34px 42px 48px;overflow:hidden;}
+.doc-instr{max-width:1040px}.doc-eval{max-width:1380px}.doc-plan{max-width:1760px}
+.site-brand{margin:0 0 22px!important;padding:0 0 11px!important;border-bottom:3px solid var(--gold)!important;color:var(--navy)!important;background:transparent!important;}
+.site-brand p{margin:0!important;color:var(--navy)!important;font-size:.82rem!important;letter-spacing:.07em;text-transform:uppercase;font-weight:800;}
+.evaris-doc p{margin-top:0!important;margin-bottom:.62rem!important;margin-left:0!important;margin-right:0!important;line-height:1.5!important;}
+.evaris-doc h1,.evaris-doc h2,.evaris-doc h3{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--navy)!important;line-height:1.18!important;text-align:left!important;letter-spacing:-.015em;}
+.evaris-doc h1{font-size:1.9rem!important;margin:1.55rem 0 .62rem!important;font-weight:800!important;}
+.evaris-doc h2{font-size:1.2rem!important;margin:1.15rem 0 .48rem!important;font-weight:800!important;}
+.evaris-doc h3{font-size:1.02rem!important;margin:.95rem 0 .4rem!important;font-weight:750!important;}
+.evaris-doc > p:first-of-type{margin-top:0!important;}
+.evaris-doc font{font-family:inherit!important;font-size:inherit!important;}
+.evaris-doc a{color:#0a65a8;text-decoration:none;border-bottom:1px solid rgba(10,101,168,.28);}
+.evaris-doc a:hover{color:#064a7b;border-bottom-color:currentColor;}
+.evaris-doc ul,.evaris-doc ol{margin:.35rem 0 .78rem 1.15rem!important;padding-left:1.15rem!important;}
+.evaris-doc li{margin:.18rem 0;line-height:1.45;}
+.evaris-doc br{line-height:1.25;}
+.evaris-doc [style*="background: #0b2b4c"],.evaris-doc [style*="background:#0b2b4c"]{border-radius:9px;padding:.68rem .82rem!important;margin:.9rem 0 .65rem!important;}
+.evaris-doc [style*="background: #ddecf4"],.evaris-doc [style*="background:#ddecf4"]{border-radius:8px;padding:.5rem .72rem!important;margin:.55rem 0!important;}
+.evaris-doc [style*="background: #fff4cc"],.evaris-doc [style*="background:#fff4cc"]{border-radius:7px;padding:.32rem .55rem!important;}
+.table-scroll{width:100%;overflow-x:auto;overflow-y:hidden;margin:.9rem 0 1.15rem;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 4px 14px rgba(16,42,67,.05);}
+.table-scroll table{margin:0!important;border:0!important;border-collapse:collapse!important;background:#fff;}
+table{font-size:.88rem!important;line-height:1.35!important;}
+td,th{padding:.52rem .58rem!important;vertical-align:top!important;border:1px solid var(--line)!important;height:auto!important;line-height:1.35!important;}
+td p,th p{margin:0 0 .22rem!important;line-height:1.35!important;font-size:inherit!important;color:inherit!important;}
+td p:last-child,th p:last-child{margin-bottom:0!important;}
+thead td,thead th{position:sticky;top:0;z-index:2;background:var(--navy)!important;color:#fff!important;font-weight:800!important;text-align:center!important;box-shadow:inset 0 -2px 0 rgba(243,201,77,.8);}
+thead td *,thead th *{color:#fff!important;}
+tbody tr:hover td{background-image:linear-gradient(rgba(16,42,67,.018),rgba(16,42,67,.018));}
+.wide-table{min-width:1120px!important;width:100%!important;}
+.plan-grid{min-width:1680px!important;width:1680px!important;}
+.plan-grid td,.plan-grid th{font-size:.78rem!important;padding:.46rem .48rem!important;}
+.plan-grid thead td,.plan-grid thead th{font-size:.76rem!important;}
+.eval-grid{min-width:1160px!important;width:100%!important;}
+.check-grid{min-width:720px!important;width:100%!important;}
+.evaris-doc img{display:block;max-width:100%;height:auto;margin:1rem auto;border-radius:10px;}
+.figure-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:1rem 0 1.25rem;box-shadow:0 4px 14px rgba(16,42,67,.05);}
+hr{border:0;border-top:1px solid var(--line);margin:1.25rem 0;}
+@media(max-width:900px){
+  .site-shell{padding:0}.evaris-doc{border-radius:0;border-left:0;border-right:0;padding:24px 18px 38px;box-shadow:none}
+  body{font-size:15px}.evaris-doc h1{font-size:1.55rem!important}.evaris-doc h2{font-size:1.12rem!important}
+  .table-scroll{border-radius:8px;margin-left:0;margin-right:0}
+}
+@media print{
+  html,body{background:#fff}.site-shell{padding:0}.evaris-doc{box-shadow:none;border:0;border-radius:0;max-width:none;padding:0}.table-scroll{overflow:visible;box-shadow:none}
+  .plan-grid,.wide-table,.eval-grid,.check-grid{min-width:0!important;width:100%!important}a{color:inherit!important;border:0!important}
+}
+</style></head>
+<body dir="ltr" lang="ro" link="#000080" text="#0b2824" vlink="#800000"><aside lang="en" style="max-width:1100px;margin:18px auto;padding:14px 18px;border-left:4px solid #8fb33f;background:#f3f7e9;color:#23312c;font:600 14px/1.5 Arial,sans-serif">English translation of the Romanian example. Informational sample only; it must be reviewed and adapted to the actual workplace, equipment and applicable legal requirements before use.</aside><div class="site-shell"><main class="evaris-doc doc-instr">
+<div class="site-brand"><p style="border-top: none; border-bottom: 2.00pt solid #dcff73; border-left: none; border-right: none; padding: 0in; margin-bottom: 0.41in; line-height: 100%">
+<font size="2" style="font-size: 9pt"><b>EVARIS / OSH AND EMERGENCY / FIRE SAFETY</b></font></p>
+</div>
+<p style="margin-bottom: 0.1in; letter-spacing: 0.3pt"><font color="#000000"><font face="Calibri, serif"><font size="6" style="font-size: 29pt"><b><span lang="ro-RO">Instructions
+own safety and health at work</span></b></font></font></font></p>
+<p style="letter-spacing: 0.8pt; margin-bottom: 0.1in"><font color="#000000"><font face="Calibri, serif"><font size="4" style="font-size: 14pt"><i><span lang="ro-RO">Mechanic
+agricultural</span></i></font></font></font></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Exploitation
+tractors and agricultural machines<br/>
+Maintenance and
+workshop and field repairs</span></p>
+<h2 class="western"><span lang="ro-RO">Document status</span></h2>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO"><b>This one
+material is an example of structure. It cannot be used as
+final document without verifying the actual activity, a
+equipment, workplaces, exposed workers and
+applicable legal requirements.</b></span></p>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">The citation
+of the provisions is made by "art. ... of the OSH's own Instructions
+for agricultural mechanics", indicating the code and revision
+the document. Numbers in square brackets, such as [9], remain
+bibliographic references. Articles are numbered continuously;
+the tables have the role of synthesis and verification.</span></p>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Version
+editorial revised on September 20, 2026, starting from
+the document provided. The content has been reorganized and supplemented with
+measures for machinery interventions. It is not an evaluation of
+risks carried out at an identified employer.</span></p>
+<h2 class="western"><span lang="ro-RO">Data to be completed before
+application</span></h2>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Employer
+and work point: __________________________________<br/>
+Code
+internal and revision:
+________________________________________<br/>
+Equipment and
+activities covered: ___________________________<br/>
+Prepared and
+verified by: ________________________________________<br/>
+Approved by
+employer on the date: _________________________________</span></p>
+<h2 class="western"><span lang="ro-RO">Document structure</span></h2>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">01
+Application and Responsibilities • 02 Risks and Protection<br/>
+03
+Checks before work • 04 Driving and coupling<br/>
+05
+Safe shutdown and interventions • 06 Work in the workshop<br/>
+07
+Work environment and emergencies • 08 Daily check<br/>
+09
+Sources</span></p>
+<h1 class="western" style=""><span lang="ro-RO">01
+ Application and Responsibilities</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Purpose and
+limits</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+1. </b></span><span lang="ro-RO">The instructions aim at prevention
+injury and illness while driving, servicing,
+maintenance and repair of agricultural machinery. It applies
+operations assigned by the job description, within the limits of training,
+training and designation of the worker. Mechanic quality
+agricultural does not automatically confer the right to drive on public roads
+or to perform any repair.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+2. </b></span><span lang="ro-RO">It is completed for each machine
+model with manufacturer's manual, accessories used, points
+containment and support, operating limits and risks
+identified at work. Welding, machining,
+working on electrical installations or treatment equipment
+phytosanitary measures are only included if they are actually executed.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Responsibilities</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+3. </b></span><span lang="ro-RO">The employer provides the assessment
+risks, adequate and maintained equipment, training,
+supervision and means of protection; approve the instructions
+adapted. [1, 2]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+4. </b></span><span lang="ro-RO">The leader of the workplace
+distribute tasks in relation to competence, check the area of
+work and stop the use of unsuitable machinery.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+5. </b></span><span lang="ro-RO">The worker checks the machine,
+follow instructions, use protections and communicate
+faults or dangerous situations immediately. It does not neutralize
+security devices. [1]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+6. </b></span><span lang="ro-RO">Inexperienced workers
+they receive assignments and supervision tailored to their training. For
+young people, legal conditions and risks are checked separately; this
+model does not constitute a work permit for minors. [3]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Conditions of
+admission</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+7. </b></span><span lang="ro-RO">The activity is carried out by
+personnel prepared for the respective equipment, trained and fit
+medical for the assigned task. Working under the influence is prohibited
+alcohol or other substances that affect the ability to
+work. Fatigue, illness or influencing treatments
+vigilance is communicated before taking over the machine.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Terms
+use</span></h2>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">OSH
+— safety and health at work. PPE — equipment
+individual protection. PTO — PTO
+mechanics that drive the machine. ROPS — protective structure
+to overturn. Isolation of energies — separation and securing
+energy sources, including waste energy control. Danger
+serious and imminent — concrete and actual situation in which a
+accident can occur at any time. [1]</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">02 Risks and Protection</span></h1>
+<p align="justify" class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">The inventory
+below summarizes the risks in the original document and
+prevention supplements. Their presence and level are checked
+for each job; no scores or values are assigned
+measured without real data.</span></p>
+<center>
+<div class="table-scroll"><table aria-label="Tabel 1" cellpadding="6" cellspacing="0" class="" role="table" width="662">
+<col width="261"/>
+<col width="376"/>
+<thead>
+<tr>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Situation
+					dangerous</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>The measure
+					main</b></span></font></font></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">gimbal,
+					belts, fan, working organs</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Defenders
+					complete; stop and isolate before access.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">collision,
+					reversing, maneuvers without visibility</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Separation
+					pedestrians; free zone; adapted speed.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">overturning,
+					jacking, loss of grip</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Equipment
+					and appropriate route; ROPS and belt; controlled pregnancy.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">The fall
+					parts, wells or equipment lifted</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Support
+					dimensioned mechanic; access prohibited under suspended loads.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Jet
+					hydraulic, compressed air, containers under pressure</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Depressurization;
+					compatible components; control without contact with the jet.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">shavings,
+					abrasive disc, sharp edges</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Tools
+					checked; fixed piece; screens and eye protection.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">burns,
+					fire, explosion, electric arc</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">The control
+					ignition sources; cooling; procedure for works at
+					hot</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Electrocution
+					to tools or installations</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Equipment
+					checked; isolation; interventions by competent personnel.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">noise,
+					vibrations, exertion and forced postures</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">maintenance,
+					seat adjustment, exposure organization, mechanical aids.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">dust,
+					gases, vapors, phytosanitary products</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Ventilation
+					and capture; decontamination; protection established after
+					exposure.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">cold,
+					heat, microorganisms, animals and insects</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">The organization
+					work, hygiene, appropriate clothing and control
+					area.</span></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="261"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">slip,
+					tripping, falling from the machine</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="376"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Access
+					clean and safe; three points of support; no climbing while walking.</span></font></p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</center>
+<h2 align="justify" class="western"><span lang="ro-RO">The choice
+personal protective equipment</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+8. </b></span><span lang="ro-RO">The EIP is determined by assessment
+risks: protective footwear, fitted clothing,
+eye protection and, where appropriate, hearing protection or
+respiratory. Gloves are chosen for the operation performed; it doesn't
+bearing next to exposed rotating members if they are driveable. Yes
+remove jewelry and tie back long hair.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">03 Checks before work</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">The machine</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+9. </b></span><span lang="ro-RO">Check the brakes, steering,
+tires, wheel fasteners, controls and
+the indicators. Any defect that affects security is fixed
+before use.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+10. </b></span><span lang="ro-RO">Controls outlet guards
+power, gimbal, belts and fan. Don't start
+the machine with missing, damaged or improvised protections.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+11. </b></span><span lang="ro-RO">Visually check the hoses,
+connections and possible losses of oil, fuel or liquid
+cooling. Do not touch the jets or tighten pressure connections.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+12. </b></span><span lang="ro-RO">Controls the seat, belt,
+rollover structure, steps, handles and
+the visibility. Secures tools and objects in the cabin.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+13. </b></span><span lang="ro-RO">Check lights, signaling,
+mirrors and trailer connections as well as the means of
+intervention provided for the activity.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Area and
+workload</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+14. </b></span><span lang="ro-RO">Identify pits, mouths of
+hydrant, ditches, slopes, overhead power lines (LEAs) and
+underground power lines (ES), unstable edges and spaces
+maneuver. Delineate hazardous areas and routes for
+pedestrians.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+15. </b></span><span lang="ro-RO">Check the terrain and conditions
+meteorological. Stop or postpone pregnancy when adhesion,
+visibility or stability do not allow safe execution.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+16. </b></span><span lang="ro-RO">Plan transportation and
+assembly gauge, including height with accessories raised.
+Identify overhead power lines; set the distances and
+measures with competent persons before work.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+17. </b></span><span lang="ro-RO">Remove people
+uninvolved, including children, from the machine area. Ensure
+communication between the leader and the person who leads
+maneuvers.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Starting and
+the access</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+18. </b></span><span lang="ro-RO">Get on and off the access
+designed by the manufacturer, facing the machine and three points of
+support Do not jump or climb or dismount while walking. Hold the steps
+no oil, mud or ice.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+19. </b></span><span lang="ro-RO">Start from the post of
+driving, parking brake applied, controls in position
+indicated in the manual and the PTO disengaged.
+Check the area before acting. Do not bypass interlocks and
+do not short circuit the starter.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+20. </b></span><span lang="ro-RO">Do not let the engine run
+in closed spaces without controlled exhaust of gases
+exhaust. If the initial check reveals a hazard,
+mark the machine as unavailable and notify the driver
+workplace.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">04 Driving and Coupling</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Displacement and
+working on the slope</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+21. </b></span><span lang="ro-RO">Adapts speed to terrain, load
+and visibility; reduce speed before turning. Respect the table
+admitted and secures the load. Transports people only in
+the places provided by the manufacturer; drawbar, tie rods and
+towed machines are not seats for passengers.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+22. </b></span><span lang="ro-RO">On the slope, choose the machine and
+configuration allowed by the manufacturer. Check stability
+assembly and the effect of the trailer or accessories on the center
+of weight. Maintain a safety zone from the edges and
+trenches. A previously trodden terrain may become unsafe afterwards
+rain or frost. [6]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+23. </b></span><span lang="ro-RO">Select before entering on
+step slope or mode of travel recommended by the manufacturer. No
+come down to neutral and do not intentionally interrupt braking by
+motor. Do not use the reverse differential lock
+machine instructions. The brake pedals are engaged
+according to the working method and the manual.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+24. </b></span><span lang="ro-RO">Use the belt in conjunction with
+rollover protection structure provided and functional.
+When overturning, stay in the protected area of ​​the cabin; don't try to
+jump Do not modify or disable the protective structure. [6]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Coupling
+machinery and trailers</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+25. </b></span><span lang="ro-RO">Use only couplets, periods
+towing and compatible accessories. Don't improvise the catch in
+points that can produce camber.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+26. </b></span><span lang="ro-RO">Immobilize the tractor and
+the machine. Entry between them is allowed only after stopping,
+insurance against displacement and elimination of the risk of crushing.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+27. </b></span><span lang="ro-RO">Install and secure the bolts,
+braces and stabilizers; check the center tie rod and
+the safety elements. Do not insert your hands into the points
+crush</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+28. </b></span><span lang="ro-RO">Connect the brake correctly,
+lighting and hydraulic installation, according to the configuration.
+Check operation before departure.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+29. </b></span><span lang="ro-RO">Control the gimbal and
+guards, including compatibility and working angles.
+Disconnect the plug when the manual asks for it, including tight maneuvers.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+30. </b></span><span lang="ro-RO">Raise and lower the accessory
+only with the free zone. When transporting, secure it according to the manual
+against uncontrolled lowering or swinging.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">The clearance
+the jammed machine</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+31. </b></span><span lang="ro-RO">Stop and set a method
+recovery with dimensioned equipment and attachment points
+approved. Remove people from the area of ​​stressed elements. No
+put planks in front of the drive wheels and don't pull with shocks or
+with improvised accessories.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">05 Safe shutdown and interventions</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Before
+unlocking or maintenance</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+32. </b></span><span lang="ro-RO">Stopping the engine does not remove
+automatically all hazards. Before the intervention, apply the procedure
+machine isolation; hydraulic controls, inertia, springs and
+the weight of the parts can hold dangerous energy. [4]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+33. </b></span><span lang="ro-RO">Park on a surface
+stable, applies the brake and secures the wheels against rolling.
+Lower the attachments to a safe position.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+34. </b></span><span lang="ro-RO">Cut out the workouts, stop
+engine and wait for all parts to stop. Take out the key and
+keep it under the control of the person intervening.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+35. </b></span><span lang="ro-RO">Isolate the relevant sources and
+block the restart according to the procedure. Signal the intervention;
+in teamwork each person must be protected against
+restart.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+36. </b></span><span lang="ro-RO">Controlled release of pressures and
+secures stored energy. Mount mechanical supports for
+any item that can fall or pivot.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+37. </b></span><span lang="ro-RO">Check safe status first
+of access. On reset, install the protections and confirm that all
+people, tools and temporary supports are out of range
+dangerous.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Hydraulics and
+high components</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+38. </b></span><span lang="ro-RO">Do not look for leaks with your hand and
+do not loosen connections before depressurization. Hoses, couplings
+and replacement gaskets must be compatible with
+machine specifications. Don't repair hoses with makeshifts.
+Pressure testing is done through a controlled procedure, with the area
+delimited. [7]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+39. </b></span><span lang="ro-RO">A fine jet can penetrate under
+skin. Suspected oil or grease injection is an emergency
+medical, even when the injury seems small; call for help immediately
+and communicates the type of fluid. Don't wait for the pain to appear. [8]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+40. </b></span><span lang="ro-RO">Do not work under the supported tractor
+only by jacking and not under a winch maintained only hydraulically.
+Use the lifting points in the manual, the appropriate jack and
+dimensioned supports, on resistant and level ground. It blocks
+articulation of articulated tractors before entering the area of
+crush [5]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Unlocking and
+energy checks</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+41. </b></span><span lang="ro-RO">Clean and unlock with
+suitable tools, out of the way of parts that can be released
+suddenly A test that requires energy is executed only if it is
+provided by the manufacturer's procedure, by competent personnel and
+with distinct measures; don't improvise with defenders far away.</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">06 Work in the workshop</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Tools and
+processing machines</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+42. </b></span><span lang="ro-RO">Removes cracked tools, keys
+worn and loose hammers. Fix the pieces in
+suitable devices. When drilling and grinding, it keeps the screens
+and guards, choose the tool or disc compatible with the speed and
+the material and direct the sparks away from people and
+combustible materials.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+43. </b></span><span lang="ro-RO">He doesn't hold the piece with his hand when he can
+be trained. Stop the machine before measuring, adjusting or
+chip removal; use a brush or a tool
+appropriate. For long parts, supports and devices are used
+provided technologically. Do not leave the machine running
+unsupervised.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Wheels and
+tyres</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+44. </b></span><span lang="ro-RO">Changing and repairing wheels
+is executed by competent persons, with mechanical means for
+handling heavy wheels. Secure the vehicle, properly support it and
+controls the roll of the removed wheel. For removable rims
+or damaged components, request a specialist. [5]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+45. </b></span><span lang="ro-RO">Use inflation equipment with
+pressure gauge and pressure control, connection not to be kept with
+hand and hose sufficient for operation outside the path of
+explosion. Use appropriate restraint/protection
+the wheels. Comply with manufacturer's pressures and procedure; no
+do not heat or weld a wheel with the tire mounted. [5]</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Welding and
+works with fire</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+46. </b></span><span lang="ro-RO">Perform these operations only in
+the conditions established for that work, with staff
+competent, ventilation/trapping, screens to protect others and
+Appropriate PPE. Secures cylinders and protects hoses.
+Removes combustibles, controls sparks and secures
+extinguishing means. [9]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+47. </b></span><span lang="ro-RO">Do not weld containers that have contents
+fuels without a specialized procedure for putting in
+safety. Do not use broken or unsuitable welding filters.
+Completion of the work includes control of the area for sources of
+remaining ignition.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Electricity
+and batteries</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+48. </b></span><span lang="ro-RO">Check power tools,
+cables and protections; remove defective equipment from use.
+Electrical repairs should only be carried out by competent personnel
+that facility. Before working on the machine,
+disconnect the battery when the procedure calls for it and follow the order
+indicated by the manufacturer.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+49. </b></span><span lang="ro-RO">Charges batteries in an area
+ventilated, without flame or sparks; prevent short circuit
+terminals with tools. When working with electrolyte, use protection
+eyes and skin. For high voltage electrical systems
+or damaged batteries procedures and skills are required
+dedicated. [9]</span></p>
+<h1 align="justify" class="western" style="">
+<span lang="ro-RO">07 Work environment and emergencies</span></h1>
+<h2 align="justify" class="western"><span lang="ro-RO">Fuels and
+hot surfaces</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+50. </b></span><span lang="ro-RO">Feed in the established area,
+with the engine off and sufficiently cooled according to the manual, away from
+ignition sources. Collect spills with suitable materials and
+dispose of waste safely. Do not restart until
+the danger has been removed. Do not use fuel for degreasing.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+51. </b></span><span lang="ro-RO">Do not open the cooling system
+hot or under pressure. Allow the engine to cool and
+follow the manual. Avoid contact with the exhaust, welded parts and
+the hot oil. In environments with dry vegetation, remove
+fuel deposits and check exhaust and equipment
+fire prevention provided for the machine.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Exposures and
+physical request</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+52. </b></span><span lang="ro-RO">Maintains cabin, filters, seat
+and suspension in good condition. Establish measures for noise and
+vibration based on evaluation and, when necessary, measurements.
+The value of 87 dB(A) in the old document is not treated as
+result measured at a current job.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+53. </b></span><span lang="ro-RO">Limits dust and gases through
+maintenance, capture and ventilation. To machines used for
+phytosanitary products, identify residues and decontaminate
+according to the product instructions before repairs. Don't blow
+with compressed air the dust from the clothes or from the brakes with
+unknown material; if asbestos is suspected, a procedure is applied
+specialized. [5]</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+54. </b></span><span lang="ro-RO">Plan breaks, hydration and
+protection against heat or cold. Use aids
+mechanics for heavy parts; avoid forced positions. Keep it
+hand hygiene, covers the lesions and checks the area for
+animals, insects and biologically contaminated materials.</span></p>
+<h2 align="justify" class="western"><span lang="ro-RO">Incident and
+serious danger</span></h2>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+55. </b></span><span lang="ro-RO">Stop the activity when it
+it can be done safely, alert people in the area and
+announces the workplace leader.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+56. </b></span><span lang="ro-RO">In case of serious accident, fire
+uncontrolled or other emergency, call 112. Communicate the location
+exactly, the access, the nature of the danger and the number of people affected.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+57. </b></span><span lang="ro-RO">First aid is given by
+trained persons, without exposure to machinery, electricity, smoke or
+jets. Do not enter a hazardous area for rescue without
+means and skills.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+58. </b></span><span lang="ro-RO">Use the fire extinguisher only if
+you are trained, the outbreak is incipient and you have a safe way to
+withdrawal; otherwise evacuate. Do not resume work until removed
+the cause and accepting the reboot.</span></p>
+<p align="justify" class="western" style=""><span lang="ro-RO"><b>Art.
+59. </b></span><span lang="ro-RO">When finished, park
+in the designated place, lower the accessories, secure the machine and
+the key, cleans the area and records the faults. Teach
+the information needed for the next exchange.</span></p>
+<p align="justify" class="western" lang="ro-RO" style="">
+<br/>
+<br/>
+</p>
+<p align="justify" class="western" style=""><font face="Calibri, serif"><font size="5" style="font-size: 20pt"><span lang="ro-RO"><b>08
+ Daily check</b></span></font></font></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Sheet
+pre-start check guideline. It adapts
+of each machine model and does not replace revisions or
+the technical checks provided by the manufacturer.</span></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Date:
+__________________ Worker: _________________________<br/>
+Equipment
+and identification: _______________________________________</span></p>
+<center>
+<div class="table-scroll"><table aria-label="Tabel 2" cellpadding="6" cellspacing="0" class="check-grid" role="table" width="662">
+<col width="419"/>
+<col width="46"/>
+<col width="46"/>
+<col width="102"/>
+<thead>
+<tr>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Item
+					verified</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>Yes</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>No</b></span></font></font></p>
+</td>
+<td bgcolor="#0b2824" style="background: #0b2824; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western">
+<font color="#ffffff"><font size="2" style="font-size: 10pt"><span lang="ro-RO"><b>No
+					applies</b></span></font></font></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">brakes,
+					steering, wheels and tires in proper condition</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Defenders
+					and full security devices</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">ROPS,
+					belt, seat and access without visible defects</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Without
+					leaks or visibly damaged hoses</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">coupling,
+					bolts and stabilizers provided</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Connections
+					braking and signaling checked</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Gimbal
+					properly mounted and protected</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">The area
+					free; obstacles and hazardous terrain identified</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Pregnancy
+					and route suitable for the machine</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">PPE and
+					means of intervention available</span></font></p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#ffffff" style="background: #ffffff; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="419"><p class="western">
+<font size="2" style="font-size: 10pt"><span lang="ro-RO">Manual
+					and accessible isolation procedure</span></font></p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="46"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+<td bgcolor="#f4f6f1" style="background: #f4f6f1; border: 1px solid #d9d9d9; padding: 0.07in" width="102"><p class="western" lang="ro-RO">
+<br/>
+</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</center>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+60. </b></span><span lang="ro-RO">A "No" response to a condition
+security requires remediation before use. "I don't know
+apply" is justified by the actual configuration and activity.</span></p>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Defects
+observed and measures:
+__________________________________<br/>
+__________________________________________________________<br/>
+The person
+informed and time: ___________________________________<br/>
+Confirmation
+remedies: _______________________________________</span></p>
+<h2 class="western"><span lang="ro-RO">Specific dates to be determined at
+employer</span></h2>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+61. </b></span><span lang="ro-RO">The points of isolation, support and
+coupling for each machine; load limits, slope and
+manual speed.</span></p>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+62. </b></span><span lang="ro-RO">Competent persons, operations
+permits and conditions for intervention in the field or work
+individually.</span></p>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+63. </b></span><span lang="ro-RO">Emergency contacts,
+the access of rescuers and the location of the kit and fire extinguishers.</span></p>
+<p class="western" style=""><span lang="ro-RO"><b>Art.
+64. </b></span><span lang="ro-RO">Equipment of PPE, periodicity
+checks and how to record faults.</span></p>
+<p class="western" lang="ro-RO" style=""><br/>
+<br/>
+</p>
+<p class="western" style=""><font face="Calibri, serif"><font size="5" style="font-size: 20pt"><span lang="ro-RO"><b>09
+ Sources</b></span></font></font></p>
+<h2 class="western"><span lang="ro-RO">Consultation basis</span></h2>
+<p class="western" style="margin-bottom: 0.1in"><span lang="ro-RO">Sources
+official documents consulted on September 20, 2026. The Romanian documents are
+check in the form applicable to the approval of the instruction.
+The HSE guidelines are UK technical prevention benchmarks, no
+Romanian legislation. The additions are validated with the manuals
+machinery and local assessment.</span></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[1]
+Law no. 319/2006 on occupational health and safety</span></font><a href="https://legislatie.just.ro/Public/DetaliiDocument/73772"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[2]
+HG no. 1146/2006 regarding the use of work equipment</span></font><a href="https://legislatie.just.ro/Public/DetaliiDocument/75585"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[3]
+GD no. 600/2007 regarding the protection of young people at work</span></font><a href="https://legislatie.just.ro/Public/DetaliiDocumentAfis/83571"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[4]
+HSE — Safe maintenance</span></font><a href="https://www.hse.gov.uk/agriculture/topics/maintenance-1.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[5]
+HSE — Vehicle repair</span></font><a href="https://www.hse.gov.uk/agriculture/topics/maintenance-2.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[6]
+HSE — Overturning tractors and other self-propelled vehicles</span></font><a href="https://www.hse.gov.uk/agriculture/topics/machinery/farm-vehicles-2.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[7]
+HSE — High pressure fluid injection hazards</span></font><a href="https://www.hse.gov.uk/agriculture/topics/machinery/fluid.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[8]
+HSE — Hydraulic injection injury</span></font><a href="https://www.hse.gov.uk/safetybulletins/hydraulic-injection-injury.htm"><span lang="ro-RO">↗</span></a></p>
+<p class="western" style="margin-bottom: 0.07in"><font size="2" style="font-size: 10pt"><span lang="ro-RO">[9]
+HSE — General workshop safety</span></font><a href="https://www.hse.gov.uk/agriculture/topics/maintenance-3.htm"><span lang="ro-RO">↗</span></a></p>
+
+</main></div></body>
+</html>
