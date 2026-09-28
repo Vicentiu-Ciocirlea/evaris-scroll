@@ -2,6 +2,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
 const root = new URL('../', import.meta.url);
+const css = fs.readFileSync(new URL('dist/legislation.css', root), 'utf8');
+assert.ok(fs.existsSync(new URL('dist/evaris-legislatie.png', root)), 'Legislation image must be packaged');
+assert.ok(css.includes("url('/evaris-legislatie.png')"), 'Legislation hero must use the shared background');
 const data = JSON.parse(fs.readFileSync(new URL('data/legislation.json', root), 'utf8').replace(/^\uFEFF/, ''));
 const counts = { ssm: 41, su: 33, conexe: 11 };
 assert.equal(data.acts.length, 85);

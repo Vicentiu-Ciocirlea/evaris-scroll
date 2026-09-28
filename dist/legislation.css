@@ -1,6 +1,6 @@
 .leg-page{background:#f4f6f1}
 .leg-page .seo-primary-nav a[aria-current="page"],.leg-page .seo-mobile-menu a[aria-current="page"]{color:#dcff73}
-.leg-hero{padding:76px var(--pad) 72px;background:#0d332e;color:#fff}
+.leg-hero{padding:76px var(--pad) 72px;background:linear-gradient(90deg,#071615e8 0%,#071615bb 43%,#0716153d 84%),url('/evaris-legislatie.png') center center/cover no-repeat;color:#fff}
 .leg-hero .eyebrow{color:#dcff73}
 .leg-hero h1{max-width:1100px;font-size:clamp(3rem,6vw,6rem);line-height:1.1}
 .leg-hero>p:last-child{max-width:780px;margin:27px 0 0;color:#d6e4da;font-size:clamp(1.08rem,1.5vw,1.3rem);line-height:1.6}
@@ -30,3 +30,4 @@
 .leg-missing{max-width:900px;margin:52px 0 0;padding:22px 26px;border-left:3px solid #8db82e;background:#e7eee4;color:#365048;font-size:.92rem;line-height:1.6}
 @media(max-width:1150px){.leg-list{grid-template-columns:1fr}}
 @media(max-width:760px){.leg-hero{padding:58px var(--pad) 62px}.leg-catalog{padding:38px var(--pad) 66px}.leg-controls{padding-top:28px}.leg-group-head h2{font-size:1.75rem}.leg-act a{min-height:0;padding:19px 15px;grid-template-columns:23px minmax(0,1fr) 18px;gap:10px}.leg-act-title{font-size:.94rem}.leg-missing{margin-top:39px}}
+@media(max-width:760px){.leg-hero{background-image:linear-gradient(90deg,#071615f2,#071615b8),url('/evaris-legislatie.png');background-position:58% center}}
