@@ -1,6 +1,6 @@
 # evaris-scroll
 
-Site Evaris Consulting în română și engleză. Versiunea de pe adresa temporară are acces limitat la proprietar; conectarea domeniului evaris.ro este încă în așteptare.
+Site Evaris Consulting în română și engleză. Versiunea de pe adresa temporară are acces privat pentru proprietar și persoanele invitate; conectarea domeniului evaris.ro este încă în așteptare.
 
 URL de previzualizare: https://evaris.vicentiu-cio-9987.chatgpt.site
 Versiunea EN: https://evaris.vicentiu-cio-9987.chatgpt.site/en/
@@ -23,6 +23,7 @@ Cele trei zone principale sunt prezentarea, serviciile SSM și SU/PSI, respectiv
 - Animații de apariție și parallax, bandă continuă cu pauză și respectarea preferinței pentru mișcare redusă.
 - Formularul validează datele și pregătește un mesaj verificabil, cu deschidere în e-mail sau copiere. Nu trimite automat e-mailuri și nu pretinde că mesajul a fost expediat. Cererea în lucru se transferă temporar în aceeași filă când se schimbă limba.
 - Întrebări extensibile și dialog de confidențialitate.
+- Chat bilingv cu răspunsuri prestabilite, trimiteri către paginile Evaris și redimensionare prin tragerea marginilor. Întrebările sunt procesate local în browser, fără AI.
 
 Sunt incluse evaluarea riscurilor profesionale, instrucțiunile proprii SSM și planul de prevenire și protecție pentru postul de mecanic agricol. PDF-ul certificatului de abilitare nu este inclus; mențiunea abilitării este păstrată fără descărcare.
 
