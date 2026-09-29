@@ -7,4 +7,4 @@ The new-business guide pages use `dist/evaris-ghid-ssm-firma-noua.png`, an origi
 The legislation catalog uses `dist/evaris-legislatie.png`, an original reference-desk scene behind the shared RO/EN page heading.
 
 Typography: DM Sans and Manrope, distributed under the SIL Open Font License. Local copies and licenses are in dist/fonts; the pages do not request remote font services.
-The team section uses `dist/evaris-echipa-consultanta.webp`, an original AI-generated illustrative workplace-safety collaboration scene. It does not depict identified Evaris employees or use third-party stock photography.
+The team section uses the image as its background: `dist/evaris-echipa-consultanta.webp`, an original AI-generated illustrative workplace-safety collaboration scene. It does not depict identified Evaris employees or use third-party stock photography.

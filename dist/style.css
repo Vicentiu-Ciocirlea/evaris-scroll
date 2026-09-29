@@ -56,4 +56,7 @@ header nav a{font-size:1.0625rem}.languages a{min-height:44px;display:flex;align
 .seo-links{background:#e8efe8}.seo-links .section-head{margin-bottom:42px}.seo-link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#cbd8ce;border:1px solid #cbd8ce}.seo-link-grid a{min-height:170px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:30px;background:#fff;transition:background .2s}.seo-link-grid a:hover{background:var(--lime)}.seo-link-grid strong{font:700 clamp(1.5rem,2.3vw,2.3rem)/1.15 'Manrope',sans-serif;letter-spacing:-.04em}.seo-link-grid span{font-size:.95rem;color:#53685d}.questions p a{text-decoration:underline;text-underline-offset:3px;font-weight:700}
 @media(max-width:760px){.seo-link-grid{grid-template-columns:1fr}.seo-link-grid a{min-height:135px;padding:25px}}
 
-.principles .team-photo{margin:0 0 38px}.team-photo img{width:100%;height:auto;aspect-ratio:3/2;max-height:340px;object-fit:cover;object-position:center;border-radius:3px}.team-photo figcaption{margin-top:10px;color:#a8bcb0;font-size:.875rem;line-height:1.4}
+
+.about{background-color:var(--night);background-image:linear-gradient(90deg,#071615ee 0%,#071615c9 55%,#071615c9 100%),url('/evaris-echipa-consultanta.webp');background-position:center,center 44%;background-size:cover,cover;background-repeat:no-repeat}
+footer .image-disclosure{flex:0 0 100%;margin:4px 0 0;color:#a8bcb0;font-size:.875rem;line-height:1.45}
+@media(max-width:760px){.about{background-image:linear-gradient(180deg,#071615c9 0%,#071615e8 340px,#071615 650px),url('/evaris-echipa-consultanta.webp');background-position:center top,center top;background-size:100% 100%,auto 650px;background-repeat:no-repeat}}
