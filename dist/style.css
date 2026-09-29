@@ -60,3 +60,9 @@ header nav a{font-size:1.0625rem}.languages a{min-height:44px;display:flex;align
 .about{background-color:var(--night);background-image:linear-gradient(90deg,#071615ee 0%,#071615c9 55%,#071615c9 100%),url('/evaris-echipa-consultanta.webp');background-position:center,center 44%;background-size:cover,cover;background-repeat:no-repeat}
 footer .image-disclosure{flex:0 0 100%;margin:4px 0 0;color:#a8bcb0;font-size:.875rem;line-height:1.45}
 @media(max-width:760px){.about{background-image:linear-gradient(180deg,#071615c9 0%,#071615e8 340px,#071615 650px),url('/evaris-echipa-consultanta.webp');background-position:center top,center top;background-size:100% 100%,auto 650px;background-repeat:no-repeat}}
+
+/* Keep footer content on readable lines when the image note spans the full width. */
+footer{flex-wrap:wrap}
+.footer-contact{flex-wrap:wrap;min-width:max-content}
+.footer-contact a,#privacy-link{white-space:nowrap}
+@media(max-width:760px){.footer-contact{min-width:0}}
