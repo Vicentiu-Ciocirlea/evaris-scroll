@@ -8,7 +8,8 @@ const riskImage = new URL('../dist/evaris-risk-desk.png', import.meta.url);
 // Ignore only translated metadata, text attributes, and language selection.
 function structure(html) {
   return [...html.matchAll(/<[^>]+>/g)].map(([tag]) =>
-    tag.replace(/ (?:lang|aria-label|alt|placeholder|name|data-service|content|aria-current)="[^"]*"/g, '')
+    tag.replace(/(href|id)="(#?)(?:team|echipa)"/g, '$1="$2TEAM"')
+      .replace(/ (?:lang|aria-label|alt|placeholder|name|data-service|content|aria-current)="[^"]*"/g, '')
       .replace(/href="\/(?:en\/examples|exemple)\/[^"]+"/g, 'href="LOCALIZED_EXAMPLE"')
       .replace(/href="\/(?:en\/)?(?:servicii-ssm-psi-bucuresti|ohs-fire-safety-bucharest)\/"/g, 'href="SERVICES_PAGE"')
       .replace(/href="\/(?:en\/)?(?:evaluare-riscuri-bucuresti|risk-assessment-bucharest)\/"/g, 'href="RISKS_PAGE"')

@@ -55,3 +55,6 @@
 @media(max-width:760px){.guide-page .seo-hero{background-image:linear-gradient(90deg,#071615e8,#071615a8),url('/evaris-ghid-ssm-firma-noua.png');background-position:60% center}}
 @media(max-width:370px){.seo-header .brand{font-size:1.4rem}.seo-mobile-menu summary{gap:5px;padding:7px 8px}.seo-header .languages a{padding:3px 5px}}
 @media(max-width:1000px){.seo-mobile-menu nav{inset:calc(100% + 12px) 0 auto auto!important}}
+
+.seo-mobile-menu nav .platform-menu{font-size:1rem;white-space:normal;max-width:230px}.seo-mobile-menu nav{max-height:calc(100dvh - 110px);overflow-y:auto}.seo-mobile-menu nav a{white-space:normal}
+@media(max-width:1800px){.seo-header .seo-header-cta{display:none}}

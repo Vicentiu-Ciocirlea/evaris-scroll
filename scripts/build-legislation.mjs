@@ -53,7 +53,8 @@ function render(lang) {
     official: 'Open in the Legislative Portal', update: act => `Consolidated text as of ${act.consolidationDate}, including ${act.amendingAct}`, missing: 'The source project also lists Order no. 3/2007 on the FIAM accident form. It is not linked here because the project does not identify a verified page in the Legislative Portal.',
     footer: 'EVARIS Consulting · Bucharest, Sector 6',
   };
-  const primary = t.primary.map(([label, target]) => `<a href="${target.startsWith('/') ? target : home + target}"${target === routes[lang] ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('');
+  let primary = t.primary.map(([label, target]) => `<a href="${target.startsWith('/') ? target : home + target}"${target === routes[lang] ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('');
+  primary += ro ? '<span class="platform-menu" aria-disabled="true">Platforma de instruire SSM/SU<small>În pregătire</small></span>' : '<span class="platform-menu" aria-disabled="true">OHS/Fire Safety Training Platform<small>In preparation</small></span>';
   const secondary = t.secondary.map(([label, id]) => `<a href="${id === 'legislation' ? routes[lang] : pageRoutes[id][lang]}"${id === 'legislation' ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('');
   const categories = [
     ['ssm', t.ssm], ['su', t.su], ['conexe', t.conexe],

@@ -145,7 +145,8 @@ function render(key, lang) {
   const primaryItems = ro
     ? [['Servicii', '#servicii'], ['Exemple', '#exemple'], ['Cum lucrăm', '#colaborare'], ['SSM digital', '#digital'], ['Întrebări', '#intrebari'], ['Legislație', '/legislatie/']]
     : [['Services', '#servicii'], ['Examples', '#exemple'], ['How we work', '#colaborare'], ['Digital safety', '#digital'], ['FAQs', '#intrebari'], ['Legislation', '/en/legislation/']];
-  const primaryLinks = primaryItems.map(([label, target]) => `<a href="${target.startsWith('/') ? target : home + target}">${label}</a>`).join('');
+  let primaryLinks = primaryItems.map(([label, target]) => `<a href="${target.startsWith('/') ? target : home + target}">${label}</a>`).join('');
+  primaryLinks += ro ? '<span class="platform-menu" aria-disabled="true">Platforma de instruire SSM/SU<small>În pregătire</small></span>' : '<span class="platform-menu" aria-disabled="true">OHS/Fire Safety Training Platform<small>In preparation</small></span>';
   const secondaryItems = ro
     ? [['Servicii SSM și PSI', 'services'], ['Evaluarea riscurilor', 'risks'], ['Prețuri', 'prices'], ['Ghid', 'guide'], ['Legislație', 'legislation']]
     : [['OHS & fire safety', 'services'], ['Risk assessment', 'risks'], ['Pricing', 'prices'], ['Guide', 'guide'], ['Legislation', 'legislation']];

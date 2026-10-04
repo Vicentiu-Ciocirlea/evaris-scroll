@@ -68,3 +68,11 @@ footer{flex-wrap:wrap}
 @media(max-width:760px){.footer-contact{min-width:0}}
 
 .platform-cta{gap:12px}.platform-cta small{font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border:1px solid #ffffff55;border-radius:999px;white-space:nowrap}
+
+/* Training platform stays visibly unavailable until its public URL is verified. */
+header nav .platform-menu{display:block;padding:10px 0;color:#fff;font-size:1.0625rem;font-weight:700;line-height:1.35;max-width:230px}header nav .platform-menu small{display:block;margin-top:5px;color:#c1d1c8;font-size:.875rem;font-weight:500}header nav .platform-menu{cursor:default}
+@media(max-width:1800px){header>.header-cta{display:none}}
+@media(max-width:1000px){header nav .platform-menu{max-width:none;font-size:1.8rem;padding:9px 0}}
+
+/* Keep the main menu horizontal on desktop, including the training entry. */
+@media(min-width:1001px) and (max-width:1800px){header{gap:16px}header nav{gap:14px;align-items:center;min-width:0;flex:1;justify-content:flex-end}header nav a{font-size:.875rem;white-space:nowrap}header nav .platform-menu{font-size:.875rem;max-width:165px;flex:0 1 165px}header nav .platform-menu small{font-size:.875rem}header .brand{font-size:1.65rem;flex-shrink:0}header .languages{flex-shrink:0}}
