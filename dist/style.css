@@ -66,3 +66,5 @@ footer{flex-wrap:wrap}
 .footer-contact{flex-wrap:wrap;min-width:max-content}
 .footer-contact a,#privacy-link{white-space:nowrap}
 @media(max-width:760px){.footer-contact{min-width:0}}
+
+.platform-cta{gap:12px}.platform-cta small{font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border:1px solid #ffffff55;border-radius:999px;white-space:nowrap}
