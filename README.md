@@ -40,3 +40,7 @@ node tests/browser-validation.cjs
 ```
 
 Testul de browser acceptă `EVARIS_TEST_URL`, `EVARIS_QA_DIR` și `EVARIS_BROWSER_PATH`. Verifică ambele limbi la lățimi de 320–1440 px, navigarea mobilă, animațiile, imaginile, formularul, copierea și mișcarea redusă. Nu expediază mesaje. Identitatea pixel cu pixel a textelor traduse nu este necesară: lungimea traducerii poate schimba rândurile.
+
+## Platforma de instruire — verificare 04/10/2026
+
+Meniurile RO/EN includ „Platforma de instruire SSM/SU” / „OHS/Fire Safety Training Platform”, cu starea „În pregătire” / „In preparation”, fără href. Repository-ul `Vicentiu-Ciocirlea/platforma-instruire-ssm`, main `1035eb463e3994058da349aa2cd7747f6d742588`, nu conține o adresă publică de acces verificabilă; configurația Vite/API indică localhost, iar GitHub nu raportează deployments. Platforma este încă în lucru în chat-ul „Construiește platforma SSM/SU/PSI”. Lipsește publicarea platformei și confirmarea URL-ului HTTPS funcțional. După confirmare, înlocuiți intrarea indisponibilă în ambele limbi și în cele două generatoare de pagini cu un link către acea adresă.
