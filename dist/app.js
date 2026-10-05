@@ -1,7 +1,7 @@
 document.documentElement.classList.add('js');
 
-const redirectHosts=['www.evaris.ro','e-ssm.ro','www.e-ssm.ro','e-su.ro','www.e-su.ro'];
-if(redirectHosts.includes(location.hostname.toLowerCase())) location.replace('https://evaris.ro'+location.pathname+location.search+location.hash);
+const redirectHosts=['evaris.ro','e-ssm.ro','www.e-ssm.ro','e-su.ro','www.e-su.ro'];
+if(redirectHosts.includes(location.hostname.toLowerCase())) location.replace('https://www.evaris.ro'+location.pathname+location.search+location.hash);
 
 const english=document.documentElement.lang==='en';
 const labels=english
