@@ -27,7 +27,7 @@ Cele trei zone principale sunt prezentarea, serviciile SSM și SU/PSI, respectiv
 
 Sunt incluse evaluarea riscurilor profesionale, instrucțiunile proprii SSM și planul de prevenire și protecție pentru postul de mecanic agricol. PDF-ul certificatului de abilitare nu este inclus; mențiunea abilitării este păstrată fără descărcare.
 
-Site static fără compilare. `.openai/hosting.json` indică directorul publicabil `dist`. Directiva `noindex` rămâne activă până la conectarea evaris.ro și lansarea oficială; altfel Google nu poate indexa paginile noi. Domeniile și redirecționările existente nu au fost modificate în această actualizare.
+Site static fără compilare. `.openai/hosting.json` indică directorul publicabil `dist`. Pentru lansarea pe `www.evaris.ro`, paginile principale nu mai conțin `noindex`. `dist/robots.txt` indică `dist/sitemap.xml`, care enumeră cele 12 pagini principale RO/EN. La instalare, găzduirea trebuie să servească site-ul prin HTTPS și să redirecționeze domeniul fără `www` către `www.evaris.ro`.
 
 ## Verificare
 
